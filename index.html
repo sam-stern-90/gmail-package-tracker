@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Package Tracker</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: Georgia, 'Times New Roman', serif; max-width: 46rem; margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.65; }
+  h1 { font-size: 1.6rem; } h2 { font-size: 1.2rem; margin-top: 2rem; }
+  a { color: #1a5fb4; }
+  footer { margin-top: 3rem; font-size: .9rem; border-top: 1px solid gray; padding-top: 1rem; }
+</style>
+</head>
+<body>
+<h1>Home Package Tracker</h1>
+
+<p>Home Package Tracker is a personal, single-user tool that scans the owner's
+own Gmail inbox for shipping-notification emails (USPS, UPS, FedEx, DHL, Amazon),
+extracts tracking numbers, and displays upcoming delivery dates on a private
+home dashboard. The carrier status shown on that dashboard is scraped from the
+carriers' own public tracking pages.</p>
+
+<h2 id="privacy">How the app uses Gmail data</h2>
+<p>The app requests read-only access (<code>gmail.readonly</code> — and message
+modification is <em>not</em> used) to one mailbox only: the developer's own
+account, samman9000@gmail.com. There are no other users; the app is not
+distributed or marketed.</p>
+
+<h2>What data is accessed</h2>
+<ul>
+  <li>Emails matching shipping-notification search queries (subject, sender, body text).</li>
+  <li>Only the portions of those emails used to detect tracking numbers and delivery dates.</li>
+</ul>
+
+<h2>What happens to that data</h2>
+<ul>
+  <li>Extracted tracking numbers, statuses, and dates are stored <strong>only
+      on the owner's own computer</strong>, in a local JSON file.</li>
+  <li>Nothing is sent to, shared with, sold to, or stored by any third party.</li>
+  <li>Email contents are never logged or displayed beyond the dashboard view.</li>
+  <li>No data is used for advertising or model training.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>The owner and sole user can be reached at
+<script>document.write('samman' + '9000' + '@' + 'gmail' + '.' + 'com')</script>
+&nbsp;<noscript>see contact in app</noscript>.</p>
+
+<footer>
+  <p><a href="./privacy.html">Privacy Policy</a> &middot; Home Package Tracker &middot; personal project</p>
+</footer>
+</body>
+</html>
